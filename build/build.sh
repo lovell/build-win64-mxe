@@ -75,22 +75,20 @@ if [ "$initialize" = true ]; then
   git apply $work_dir/patches/mxe-fixes.patch
 fi
 
-# The 'plugins' variable controls which plugins are in use.
 if [ "$LLVM" = "true" ]; then
-  plugins="$work_dir/plugins/llvm-mingw"
-
   # Copy LLVM settings
   cp -f $work_dir/settings/llvm.mk $mxe_dir/settings.mk
 else
-  # Build with GCC 10.1
-  plugins="plugins/gcc10"
-
   # Copy GCC settings
   cp -f $work_dir/settings/gcc.mk $mxe_dir/settings.mk
 fi
 
-# Use the meson-wrapper and our custom overrides
-plugins+=" plugins/meson-wrapper $work_dir"
+# The 'plugins' variable controls which plugins are in use
+plugins="plugins/gcc10 plugins/meson-wrapper $work_dir"
+
+if [ "$LLVM" = "true" ]; then
+  plugins+=" $work_dir/plugins/llvm-mingw"
+fi
 
 if [ "$MOZJPEG" = "true" ]; then
   plugins+=" $work_dir/plugins/mozjpeg"
@@ -110,7 +108,7 @@ make pe-util \
   IGNORE_SETTINGS=yes \
   MXE_TARGETS=`$mxe_dir/ext/config.guess`
 
-# Build MXE's meson-wrapper (needed by pango, GDK-PixBuf, GLib and Orc), 
+# Build MXE's meson-wrapper (needed by pango, GDK-PixBuf, GLib and Orc),
 # gendef (a tool for generating def files from DLLs)
 # and libvips (+ dependencies).
 make meson-wrapper gendef vips-$deps \

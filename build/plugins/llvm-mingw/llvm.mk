@@ -13,7 +13,7 @@ $(PKG)_SUBDIR   := $(PKG)-$(subst -,,$($(PKG)_VERSION)).src
 $(PKG)_FILE     := $($(PKG)_SUBDIR).tar.xz
 # This is needed to properly override: https://github.com/mxe/mxe/blob/master/src/llvm.mk#L11
 $(PKG)_URL      := https://github.com/llvm/llvm-project/releases/download/llvmorg-$($(PKG)_VERSION)/$($(PKG)_FILE)
-$(PKG)_DEPS     := $(BUILD)~$(PKG) llvm-mingw compiler-rt-builtins libunwind libcxxabi libcxx 
+$(PKG)_DEPS     := $(BUILD)~$(PKG) llvm-mingw compiler-rt-builtins libunwind libcxxabi libcxx
 $(PKG)_TARGETS  := $(BUILD) $(MXE_TARGETS)
 
 $(PKG)_DEPS_$(BUILD) := cmake clang lld lldb
@@ -28,8 +28,7 @@ define $(PKG)_BUILD_$(BUILD)
         -DCMAKE_BUILD_TYPE=Release \
         -DLLVM_ENABLE_ASSERTIONS=OFF \
         -DLLVM_TARGETS_TO_BUILD='ARM;AArch64;X86' \
-        -DLLVM_INSTALL_TOOLCHAIN_ONLY=ON \
-        -DLLVM_TOOLCHAIN_TOOLS='llvm-ar;llvm-ranlib;llvm-objdump;llvm-rc;llvm-cvtres;llvm-nm;llvm-strings;llvm-readobj;llvm-dlltool;llvm-pdbutil;llvm-objcopy;llvm-strip;llvm-cov;llvm-profdata;llvm-addr2line;llvm-symbolizer' \
+        -DLLVM_TOOLCHAIN_TOOLS='llvm-ar;llvm-config;llvm-ranlib;llvm-objdump;llvm-rc;llvm-cvtres;llvm-nm;llvm-strings;llvm-readobj;llvm-dlltool;llvm-pdbutil;llvm-objcopy;llvm-strip;llvm-cov;llvm-profdata;llvm-addr2line;llvm-symbolizer' \
         -DLLVM_EXTERNAL_CLANG_SOURCE_DIR='$(BUILD_DIR)/$(clang_SUBDIR)' \
         -DLLVM_EXTERNAL_LLD_SOURCE_DIR='$(BUILD_DIR)/$(lld_SUBDIR)' \
         -DLLVM_EXTERNAL_LLDB_SOURCE_DIR='$(BUILD_DIR)/$(lldb_SUBDIR)' \
@@ -55,7 +54,7 @@ define $(PKG)_BUILD_$(BUILD)
     $(MAKE) -C '$(BUILD_DIR)' -j 1 install/strip
 endef
 
-# llvm requires being built in a monorepo layout with 
+# llvm requires being built in a monorepo layout with
 # libunwind, libcxxabi and libcxx available
 define $(PKG)_PRE_CONFIGURE
     $(call PREPARE_PKG_SOURCE,libunwind,$(BUILD_DIR))
