@@ -103,10 +103,10 @@ cfitsio_URL      := https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/$(cfitsi
 
 # upstream version is 4.7.1
 tiff_VERSION  := 4.7.2
-tiff_CHECKSUM := ae7aae17b86555551040999fdfa5abec9a0249f3fe0ed9dedbd4d24c2bf2dffb
+tiff_CHECKSUM := 4996f0c4f93094719b1ca5c6279b20e588773ba8a247533e486416fb662ddb88
 tiff_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/tiff-[0-9]*.patch)))
 tiff_SUBDIR   := tiff-$(tiff_VERSION)
-tiff_FILE     := tiff-$(tiff_VERSION)rc2.tar.xz
+tiff_FILE     := tiff-$(tiff_VERSION).tar.xz
 tiff_URL      := https://download.osgeo.org/libtiff/$(tiff_FILE)
 
 # upstream version is 2.17.1
@@ -136,8 +136,8 @@ libjpeg-turbo_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFI
 libjpeg-turbo_GH_CONF  := libjpeg-turbo/libjpeg-turbo/releases,,,90
 
 # upstream version is 26.05.0
-poppler_VERSION  := 26.06.0
-poppler_CHECKSUM := 4cb4e5a3dc8cb5eec751c8a23c8ba19f61f96dedc0cd07d2aee6b0c8e2cf6ba4
+poppler_VERSION  := 26.07.0
+poppler_CHECKSUM := 304832f48f8a47fdca90c6b6d1f684e68f37c10c9a0726f345f4ca9df4ca01e2
 poppler_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/poppler-[0-9]*.patch)))
 poppler_SUBDIR   := poppler-$(poppler_VERSION)
 poppler_FILE     := poppler-$(poppler_VERSION).tar.xz

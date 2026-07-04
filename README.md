@@ -35,7 +35,7 @@ Run the top-level [build script](build.sh) with the `--help` parameter for help.
 | [libimagequant] | 2.4.1[^1]  | BSD 2-Clause                                                 |
 | [libpng]        | 1.6.58     | [libpng License version 2]                                   |
 | [librsvg]       | 2.62.90    | LGPLv3                                                       |
-| [libtiff]       | [4.7.2rc2] | [libtiff License] (BSD-like)                                 |
+| [libtiff]       | 4.7.2      | [libtiff License] (BSD-like)                                 |
 | [libultrahdr]   | [1acdbed]  | MIT License                                                  |
 | [libvips]       | 8.18.3     | LGPLv3                                                       |
 | [libwebp]       | 1.6.0      | New BSD License                                              |
@@ -48,7 +48,6 @@ Run the top-level [build script](build.sh) with the `--help` parameter for help.
 
 [^1]: [A fork](https://github.com/lovell/libimagequant) of the BSD 2-Clause licensed libimagequant v2.4.1 is used.
 
-[4.7.2rc2]: https://gitlab.com/libtiff/libtiff/-/tags/v4.7.2rc2
 [1acdbed]: https://github.com/google/libultrahdr/commit/1acdbed8c712e6923ebf9de4e7c8d8dda06509e9
 [0826579]: https://github.com/mozilla/mozjpeg/commit/08265790774cd0714832c9e675522acbe5581437
 
@@ -100,14 +99,14 @@ Same as libvips-web + these extra dependencies:
 | [imagemagick]   | 7.1.2-26   | [ImageMagick License] (Apache-2.0-like)                      |
 | [imath]         | 3.2.2      | BSD 3-Clause                                                 |
 | [libdicom]      | 1.3.0      | MIT License                                                  |
-| [libjxl]        | 0.11.2     | BSD 3-Clause                                                 |
+| [libjxl]        | 0.12.0     | BSD 3-Clause                                                 |
 | [libraw]        | 0.22.1     | LGPL-2.1-only                                                |
 | [matio]         | 1.5.30     | BSD 2-Clause                                                 |
 | [nifticlib]     | 3.0.1      | Public domain                                                |
 | [openexr]       | 3.1.13     | BSD 3-Clause                                                 |
 | [openjpeg]      | 2.5.4      | BSD 2-Clause                                                 |
 | [openslide]     | 4.0.1      | LGPL-2.1-only                                                |
-| [poppler]       | 26.06.0    | GPLv2                                                        |
+| [poppler]       | 26.07.0    | GPLv2                                                        |
 | [sqlite]        | 3.53.2     | Public domain                                                |
 | [zstd]          | 1.5.7      | BSD 3-Clause                                                 |
 
