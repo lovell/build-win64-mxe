@@ -21,7 +21,7 @@ Run the top-level [build script](build.sh) with the `--help` parameter for help.
 | [cairo]         | 1.18.4     | Mozilla Public License 2.0                                   |
 | [cgif]          | 0.5.3      | MIT License                                                  |
 | [expat]         | 2.8.2      | MIT License                                                  |
-| [fontconfig]    | 2.18.1     | [fontconfig License] (BSD-like)                              |
+| [fontconfig]    | 2.18.2     | [fontconfig License] (BSD-like)                              |
 | [freetype]      | 2.14.3     | [freetype License] (BSD-like)                                |
 | [fribidi]       | 1.0.16     | LGPLv3                                                       |
 | [glib]          | 2.89.1     | LGPLv3                                                       |
@@ -30,7 +30,7 @@ Run the top-level [build script](build.sh) with the `--help` parameter for help.
 | [lcms]          | 2.19.1     | MIT License                                                  |
 | [libarchive]    | 3.8.8      | BSD 2-Clause                                                 |
 | [libexif]       | 0.6.26     | LGPLv3                                                       |
-| [libffi]        | 3.6.0      | MIT License                                                  |
+| [libffi]        | 3.7.0      | MIT License                                                  |
 | [libheif]       | 1.23.1     | LGPLv3                                                       |
 | [libimagequant] | 2.4.1[^1]  | BSD 2-Clause                                                 |
 | [libpng]        | 1.6.58     | [libpng License version 2]                                   |

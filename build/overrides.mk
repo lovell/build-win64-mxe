@@ -12,8 +12,8 @@ gdk-pixbuf_FILE     := gdk-pixbuf-$(gdk-pixbuf_VERSION).tar.xz
 gdk-pixbuf_URL      := https://download.gnome.org/sources/gdk-pixbuf/$(call SHORT_PKG_VERSION,gdk-pixbuf)/$(gdk-pixbuf_FILE)
 
 # upstream version is 3.5.2
-libffi_VERSION  := 3.6.0
-libffi_CHECKSUM := 31ff1fe32deaebfbb388727f32677bb254bf2a41382c51464c0b1837c9ee9828
+libffi_VERSION  := 3.7.0
+libffi_CHECKSUM := 2255c5a638dfb51bf67c20a12a7bb70d17feb1e9eababac05f5573146f586436
 libffi_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/libffi-[0-9]*.patch)))
 libffi_SUBDIR   := libffi-$(libffi_VERSION)
 libffi_FILE     := libffi-$(libffi_VERSION).tar.gz
@@ -110,8 +110,8 @@ tiff_FILE     := tiff-$(tiff_VERSION).tar.xz
 tiff_URL      := https://download.osgeo.org/libtiff/$(tiff_FILE)
 
 # upstream version is 2.17.1
-fontconfig_VERSION  := 2.18.1
-fontconfig_CHECKSUM := 2300f3dbfa7253b3a44f4feecdbc8dfa45dde5dc2cfb71fceaf31f394cb41031
+fontconfig_VERSION  := 2.18.2
+fontconfig_CHECKSUM := cf8e6576ef0484c15079bdaf77cd9c51c464df5365814ada4d3ee7331ea31eb5
 fontconfig_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/fontconfig-[0-9]*.patch)))
 fontconfig_SUBDIR   := fontconfig-$(fontconfig_VERSION)
 fontconfig_FILE     := fontconfig-$(fontconfig_VERSION).tar.xz
