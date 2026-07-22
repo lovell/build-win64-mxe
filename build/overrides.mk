@@ -12,8 +12,8 @@ gdk-pixbuf_FILE     := gdk-pixbuf-$(gdk-pixbuf_VERSION).tar.xz
 gdk-pixbuf_URL      := https://download.gnome.org/sources/gdk-pixbuf/$(call SHORT_PKG_VERSION,gdk-pixbuf)/$(gdk-pixbuf_FILE)
 
 # upstream version is 3.5.2
-libffi_VERSION  := 3.7.0
-libffi_CHECKSUM := 2255c5a638dfb51bf67c20a12a7bb70d17feb1e9eababac05f5573146f586436
+libffi_VERSION  := 3.7.1
+libffi_CHECKSUM := d5e9a6638ddbd2513ddb54518eb67e4bbe6fa707bcc01c10f6212f0a088d819d
 libffi_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/libffi-[0-9]*.patch)))
 libffi_SUBDIR   := libffi-$(libffi_VERSION)
 libffi_FILE     := libffi-$(libffi_VERSION).tar.gz
@@ -38,10 +38,12 @@ libarchive_FILE     := libarchive-$(libarchive_VERSION).tar.xz
 libarchive_URL      := https://github.com/libarchive/libarchive/releases/download/v$(libarchive_VERSION)/$(libarchive_FILE)
 
 # upstream version is 7.1.2-17
-imagemagick_VERSION  := 7.1.2-26
-imagemagick_CHECKSUM := d63594e334e1c410f600fb9370d78d49e4dc6f315722ca4ba083e864e5c354cb
+imagemagick_VERSION  := 7.1.2-27
+imagemagick_CHECKSUM := f65773f1f465c730f1c025c92a2524966f772ebeb77de0d817c336e1f565e9ef
 imagemagick_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/imagemagick-[0-9]*.patch)))
-imagemagick_GH_CONF  := ImageMagick/ImageMagick/tags
+imagemagick_SUBDIR   := ImageMagick-$(imagemagick_VERSION)
+imagemagick_FILE     := ImageMagick-$(imagemagick_VERSION).tar.xz
+imagemagick_GH_CONF  := ImageMagick/ImageMagick/releases,,,,,.tar.xz
 
 # upstream version is 2.40.21
 librsvg_VERSION  := 2.62.90
@@ -66,8 +68,8 @@ fribidi_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIS
 fribidi_GH_CONF  := fribidi/fribidi/releases,v,,,,.tar.xz
 
 # upstream version is 2.89.0
-glib_VERSION  := 2.89.1
-glib_CHECKSUM := 74447129c31afe141810f995626e8b99ab677413dae76ee3cf5a9cc6e75a486e
+glib_VERSION  := 2.89.2
+glib_CHECKSUM := 894fd527e305041f7723071297d79a78af4719dbd0d8fb77f6b1a85c9f5475b9
 glib_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/glib-[0-9]*.patch)))
 glib_SUBDIR   := glib-$(glib_VERSION)
 glib_FILE     := glib-$(glib_VERSION).tar.xz
@@ -144,8 +146,8 @@ poppler_FILE     := poppler-$(poppler_VERSION).tar.xz
 poppler_URL      := https://poppler.freedesktop.org/$(poppler_FILE)
 
 # upstream version is 0.21.1
-libraw_VERSION  := 0.22.1
-libraw_CHECKSUM := a789dc4e2409e2901d93793a4e0b80c7b49d0d97cf6ad71c850eb7616acfd786
+libraw_VERSION  := 0.22.2
+libraw_CHECKSUM := de86b035655accff8d4010f1a221fdf50d353cb7b1422ba26f14a0db92612cfa
 libraw_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/libraw-[0-9]*.patch)))
 libraw_SUBDIR   := LibRaw-$(libraw_VERSION)
 libraw_FILE     := LibRaw-$(libraw_VERSION).tar.gz
