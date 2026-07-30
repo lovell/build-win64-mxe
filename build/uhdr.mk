@@ -2,11 +2,10 @@ PKG             := uhdr
 $(PKG)_WEBSITE  := https://github.com/google/libultrahdr
 $(PKG)_DESCR    := Library for encoding and decoding ultrahdr images
 $(PKG)_IGNORE   :=
-# https://github.com/google/libultrahdr/tarball/ad4a92eea0d2f39f18b5ecae3165fdd56c6a478b
-$(PKG)_VERSION  := ad4a92e
-$(PKG)_CHECKSUM := 4156eb28c27e2aa0f3aa0dc77b117a7c1d47ccfa4f04a0566dfc2f00b8cceee7
+$(PKG)_VERSION  := 1.5.0
+$(PKG)_CHECKSUM := 2516ea9cb69a0efd42959fad56de760fcb898a4944231f20789f9c5387ca9c81
 $(PKG)_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/$(PKG)-[0-9]*.patch)))
-$(PKG)_GH_CONF  := google/libultrahdr/branches/main
+$(PKG)_GH_CONF  := google/libultrahdr/tags,v
 $(PKG)_DEPS     := cc libjpeg-turbo
 
 define $(PKG)_BUILD

@@ -30,16 +30,16 @@ matio_FILE     := matio-$(matio_VERSION).tar.gz
 matio_URL      := https://github.com/tbeu/matio/releases/download/v$(matio_VERSION)/$(matio_FILE)
 
 # upstream version is 3.4.0
-libarchive_VERSION  := 3.8.8
-libarchive_CHECKSUM := 3873a88801da067d0528a989af06877710529d50ee8fe6f3970cbb4302efb918
+libarchive_VERSION  := 3.8.9
+libarchive_CHECKSUM := 888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde
 libarchive_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/libarchive-[0-9]*.patch)))
 libarchive_SUBDIR   := libarchive-$(libarchive_VERSION)
 libarchive_FILE     := libarchive-$(libarchive_VERSION).tar.xz
 libarchive_URL      := https://github.com/libarchive/libarchive/releases/download/v$(libarchive_VERSION)/$(libarchive_FILE)
 
 # upstream version is 7.1.2-17
-imagemagick_VERSION  := 7.1.2-27
-imagemagick_CHECKSUM := f65773f1f465c730f1c025c92a2524966f772ebeb77de0d817c336e1f565e9ef
+imagemagick_VERSION  := 7.1.2-29
+imagemagick_CHECKSUM := 4b131411aa77b051908ea35df65ca2c52dbe04b48c3ef6b06f35c1bb595b212f
 imagemagick_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/imagemagick-[0-9]*.patch)))
 imagemagick_SUBDIR   := ImageMagick-$(imagemagick_VERSION)
 imagemagick_FILE     := ImageMagick-$(imagemagick_VERSION).tar.xz
@@ -68,8 +68,8 @@ fribidi_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIS
 fribidi_GH_CONF  := fribidi/fribidi/releases,v,,,,.tar.xz
 
 # upstream version is 2.89.0
-glib_VERSION  := 2.89.2
-glib_CHECKSUM := 894fd527e305041f7723071297d79a78af4719dbd0d8fb77f6b1a85c9f5475b9
+glib_VERSION  := 2.89.3
+glib_CHECKSUM := 09fd1e99f991067749ad66090e482ec4bd6514ad53abb4e9fbbdc2a4d2753532
 glib_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/glib-[0-9]*.patch)))
 glib_SUBDIR   := glib-$(glib_VERSION)
 glib_FILE     := glib-$(glib_VERSION).tar.xz
