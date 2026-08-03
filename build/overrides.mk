@@ -90,8 +90,8 @@ libexif_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIS
 libexif_GH_CONF  := libexif/libexif/releases,v,,,,.tar.xz
 
 # upstream version is 14.2.0
-harfbuzz_VERSION  := 14.2.1
-harfbuzz_CHECKSUM := a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e
+harfbuzz_VERSION  := 14.3.0
+harfbuzz_CHECKSUM := 16070d77cfc4ba1f1e7327e83bf9b3f55898081cabdb94e56a33e04fc8874eae
 harfbuzz_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/harfbuzz-[0-9]*.patch)))
 harfbuzz_GH_CONF  := harfbuzz/harfbuzz/releases,,,,,.tar.xz
 
@@ -138,8 +138,8 @@ libjpeg-turbo_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFI
 libjpeg-turbo_GH_CONF  := libjpeg-turbo/libjpeg-turbo/releases,,,90
 
 # upstream version is 26.05.0
-poppler_VERSION  := 26.07.0
-poppler_CHECKSUM := 304832f48f8a47fdca90c6b6d1f684e68f37c10c9a0726f345f4ca9df4ca01e2
+poppler_VERSION  := 26.08.0
+poppler_CHECKSUM := dc906e68cea698109706ac6aa3d2c9d4512fcfcac42d90b8afcda486d1b9abd0
 poppler_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/poppler-[0-9]*.patch)))
 poppler_SUBDIR   := poppler-$(poppler_VERSION)
 poppler_FILE     := poppler-$(poppler_VERSION).tar.xz
