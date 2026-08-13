@@ -4,16 +4,16 @@ $(info [overrides]   $(lastword $(MAKEFILE_LIST)))
 
 # upstream version is 2.44.6
 # gdk-pixbuf is still used by gtk4
-gdk-pixbuf_VERSION  := 2.44.7
-gdk-pixbuf_CHECKSUM := 172f80e3626ec31520a970400f1a3694e04718f6c2cd2885f75250fb5a6995a4
+gdk-pixbuf_VERSION  := 2.44.8
+gdk-pixbuf_CHECKSUM := 919f529512961a12e81cd4b4b466a48c3933469e7f9a310c6513cd4fb252ba3c
 gdk-pixbuf_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/gdk-pixbuf-[0-9]*.patch)))
 gdk-pixbuf_SUBDIR   := gdk-pixbuf-$(gdk-pixbuf_VERSION)
 gdk-pixbuf_FILE     := gdk-pixbuf-$(gdk-pixbuf_VERSION).tar.xz
 gdk-pixbuf_URL      := https://download.gnome.org/sources/gdk-pixbuf/$(call SHORT_PKG_VERSION,gdk-pixbuf)/$(gdk-pixbuf_FILE)
 
 # upstream version is 3.5.2
-libffi_VERSION  := 3.7.1
-libffi_CHECKSUM := d5e9a6638ddbd2513ddb54518eb67e4bbe6fa707bcc01c10f6212f0a088d819d
+libffi_VERSION  := 3.8.0
+libffi_CHECKSUM := 7da3e2d9a171eb0a038f592ecad3ff2bb2550f3496d87b3b29ad0cf4430c0db4
 libffi_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/libffi-[0-9]*.patch)))
 libffi_SUBDIR   := libffi-$(libffi_VERSION)
 libffi_FILE     := libffi-$(libffi_VERSION).tar.gz
@@ -54,8 +54,8 @@ librsvg_FILE     := librsvg-$(librsvg_VERSION).tar.xz
 librsvg_URL      := https://download.gnome.org/sources/librsvg/$(call SHORT_PKG_VERSION,librsvg)/$(librsvg_FILE)
 
 # upstream version is 1.57.1
-pango_VERSION  := 1.58.0
-pango_CHECKSUM := bc5bad6213ad4886a47d1e80292fd850b64159b50db67917a43d9ea80ee2298a
+pango_VERSION  := 1.58.2
+pango_CHECKSUM := 342385b6ca3b7c73455d7c80a13b7dbe4489e00bc3bd4c5bd6ed4dce421e374a
 pango_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/pango-[0-9]*.patch)))
 pango_SUBDIR   := pango-$(pango_VERSION)
 pango_FILE     := pango-$(pango_VERSION).tar.xz
@@ -76,8 +76,8 @@ glib_FILE     := glib-$(glib_VERSION).tar.xz
 glib_URL      := https://download.gnome.org/sources/glib/$(call SHORT_PKG_VERSION,glib)/$(glib_FILE)
 
 # upstream version is 2.8.1
-expat_VERSION  := 2.8.2
-expat_CHECKSUM := 3ad89b8588e6644bd4e49981480d48b21289eebbcd4f0a1a4afb1c29f99b6ab4
+expat_VERSION  := 2.8.3
+expat_CHECKSUM := f6256df90c906773d344da084402b7d3e4f22ed41b1a59c989098a83d3ea0c85
 expat_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/expat-[0-9]*.patch)))
 expat_SUBDIR   := expat-$(expat_VERSION)
 expat_FILE     := expat-$(expat_VERSION).tar.xz
@@ -90,8 +90,8 @@ libexif_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIS
 libexif_GH_CONF  := libexif/libexif/releases,v,,,,.tar.xz
 
 # upstream version is 14.2.0
-harfbuzz_VERSION  := 14.3.0
-harfbuzz_CHECKSUM := 16070d77cfc4ba1f1e7327e83bf9b3f55898081cabdb94e56a33e04fc8874eae
+harfbuzz_VERSION  := 14.3.1
+harfbuzz_CHECKSUM := 9dae9538aae2ffdf70cec31f2c27bf68e2aaeeae3112688467697d5faf6194f7
 harfbuzz_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/harfbuzz-[0-9]*.patch)))
 harfbuzz_GH_CONF  := harfbuzz/harfbuzz/releases,,,,,.tar.xz
 
@@ -112,8 +112,8 @@ tiff_FILE     := tiff-$(tiff_VERSION).tar.xz
 tiff_URL      := https://download.osgeo.org/libtiff/$(tiff_FILE)
 
 # upstream version is 2.17.1
-fontconfig_VERSION  := 2.18.2
-fontconfig_CHECKSUM := cf8e6576ef0484c15079bdaf77cd9c51c464df5365814ada4d3ee7331ea31eb5
+fontconfig_VERSION  := 2.18.3
+fontconfig_CHECKSUM := 4f7b554a38cdf78c033f666c8871f3749e14a094f65a07f630c91ed0b43d35e3
 fontconfig_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/fontconfig-[0-9]*.patch)))
 fontconfig_SUBDIR   := fontconfig-$(fontconfig_VERSION)
 fontconfig_FILE     := fontconfig-$(fontconfig_VERSION).tar.xz
