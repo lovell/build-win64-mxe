@@ -22,8 +22,8 @@ libffi_URL      := https://github.com/libffi/libffi/releases/download/v$(libffi_
 # upstream version is 1.5.23
 # cannot use GH_CONF:
 # matio_GH_CONF  := tbeu/matio/releases,v
-matio_VERSION  := 1.5.30
-matio_CHECKSUM := 8bd3b9477042ecc00dd71c04762fa58468e14cccc32fd8c6826c2da1e8bc3107
+matio_VERSION  := 1.6.0
+matio_CHECKSUM := 1481dc74e01d249e90f064333f969369fe3dd11d6cc6963e8635c581aa5d7711
 matio_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/matio-[0-9]*.patch)))
 matio_SUBDIR   := matio-$(matio_VERSION)
 matio_FILE     := matio-$(matio_VERSION).tar.gz
@@ -38,16 +38,16 @@ libarchive_FILE     := libarchive-$(libarchive_VERSION).tar.xz
 libarchive_URL      := https://github.com/libarchive/libarchive/releases/download/v$(libarchive_VERSION)/$(libarchive_FILE)
 
 # upstream version is 7.1.2-17
-imagemagick_VERSION  := 7.1.2-29
-imagemagick_CHECKSUM := 4b131411aa77b051908ea35df65ca2c52dbe04b48c3ef6b06f35c1bb595b212f
+imagemagick_VERSION  := 7.1.2-30
+imagemagick_CHECKSUM := 55100ca72b2332df6b2df4769bc153afcfcf588753dfc49b6fb8afa8ead59b23
 imagemagick_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/imagemagick-[0-9]*.patch)))
 imagemagick_SUBDIR   := ImageMagick-$(imagemagick_VERSION)
 imagemagick_FILE     := ImageMagick-$(imagemagick_VERSION).tar.xz
 imagemagick_GH_CONF  := ImageMagick/ImageMagick/releases,,,,,.tar.xz
 
 # upstream version is 2.40.21
-librsvg_VERSION  := 2.62.90
-librsvg_CHECKSUM := 5d108758255c225590d862d94f2591ee1f8cc976dc7b25b06eaba74f21850f08
+librsvg_VERSION  := 2.62.91
+librsvg_CHECKSUM := 6caeae129d40dd88f8ec49436fd89bfe4ada716a125187a7fa0def8fcaa0b250
 librsvg_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/librsvg-[0-9]*.patch)))
 librsvg_SUBDIR   := librsvg-$(librsvg_VERSION)
 librsvg_FILE     := librsvg-$(librsvg_VERSION).tar.xz
@@ -68,8 +68,8 @@ fribidi_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIS
 fribidi_GH_CONF  := fribidi/fribidi/releases,v,,,,.tar.xz
 
 # upstream version is 2.89.0
-glib_VERSION  := 2.89.3
-glib_CHECKSUM := 09fd1e99f991067749ad66090e482ec4bd6514ad53abb4e9fbbdc2a4d2753532
+glib_VERSION  := 2.89.4
+glib_CHECKSUM := 1cdbb799f558832e6f14b8337b5fd599c6918ab144977b55e05e00a5e2e84a2c
 glib_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/glib-[0-9]*.patch)))
 glib_SUBDIR   := glib-$(glib_VERSION)
 glib_FILE     := glib-$(glib_VERSION).tar.xz
@@ -96,8 +96,8 @@ harfbuzz_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LI
 harfbuzz_GH_CONF  := harfbuzz/harfbuzz/releases,,,,,.tar.xz
 
 # upstream version is 4.6.3
-cfitsio_VERSION  := 4.6.4
-cfitsio_CHECKSUM := 227b637b91c9820ea96f39a65eb087f053de567d82f4338e2884f123f8183c55
+cfitsio_VERSION  := 4.7.0
+cfitsio_CHECKSUM := ce573bbea8e75b429f8c3d3e86498741ba3dc9628a1530d2f65268397ad059e8
 cfitsio_PATCHES  := $(realpath $(sort $(wildcard $(dir $(lastword $(MAKEFILE_LIST)))/patches/cfitsio-[0-9]*.patch)))
 cfitsio_SUBDIR   := cfitsio-$(cfitsio_VERSION)
 cfitsio_FILE     := cfitsio-$(cfitsio_VERSION).tar.gz
