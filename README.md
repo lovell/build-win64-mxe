@@ -31,7 +31,7 @@ Run the top-level [build script](build.sh) with the `--help` parameter for help.
 | [libarchive]    | 3.8.9      | BSD 2-Clause                                                 |
 | [libexif]       | 0.6.26     | LGPLv3                                                       |
 | [libffi]        | 3.8.0      | MIT License                                                  |
-| [libheif]       | 1.23.1     | LGPLv3                                                       |
+| [libheif]       | 1.23.2     | LGPLv3                                                       |
 | [libimagequant] | 2.4.1[^1]  | BSD 2-Clause                                                 |
 | [libpng]        | 1.6.58     | [libpng License version 2]                                   |
 | [librsvg]       | 2.62.91    | LGPLv3                                                       |
@@ -204,7 +204,7 @@ prebuilt binaries while it is patent-encumbered.
 | Dependency      | Version    | Used under the terms of                                      |
 |-----------------|------------|--------------------------------------------------------------|
 | [libde265]      | 1.1.1      | LGPLv3                                                       |
-| [x265]          | 4.2        | GPLv2                                                        |
+| [x265]          | 4.3        | GPLv2                                                        |
 
 [libde265]: https://github.com/strukturag/libde265
 [x265]: https://bitbucket.org/multicoreware/x265_git/wiki/Home
